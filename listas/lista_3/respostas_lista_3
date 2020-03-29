@@ -1,0 +1,69 @@
+ECLP - Lista 3 - 18/03/2020 - Revisão de uso de memória em C.
+
+RESPOSTAS:
+
+1. c)
+
+2. a) Não é permitido, pois i é um int e f é um float. Só seria válido se fizesse um casting.
+b) É permitido pois está atribuindo o endereço de memória da variável i para o ponteiro pf.
+c) É permitido pois está atribuindo um valor float para o conteúdo de um ponteiro float.
+e) É permitido pois está atribuindo um valor inteiro para o conteúdo de um ponteiro float, e independente de ser um ponteiro ou não, um float
+pode receber um valor inteiro sem problemas.
+f) É permitido pois segue a mesma regra citada no item e).
+h) Não é permitido pois um ponteiro do tipo int não pode receber um valor float.
+i) É permitido
+j) Não é permitido.
+
+
+3. a)
+
+4. c)
+b)
+
+5. a) É falso, pois x é uma variável, e é diferente do endereço de memória do ponteiro xptr.
+b) É verdadeiro, pois como o endereço de x foi atribuido ao ponteiro xptr, consequentemente o conteúdo do ponteiro xptr está apontando para o 
+conteúdo da variável x.
+c) É falso pois x não é um ponteiro, é uma variável.
+d) É verdadeiro pois como não foi atribuido um asterísco no ponteiro (*xptr) então se trata do endereço de memória do ponteiro e não do 
+conteúdo. E como o endereço de memória de x foi atribuido ao ponteiro xptr então o endereço de xptr será o mesmo de x.
+
+6. a) é válido.
+b) não é válido, pois irá perder a referência do primeiro indice, que é necessário para o ponteiro. O ponteiro sempre irá apontar para a primeira posição do vetor, e não é permitido apontar para qualquer outra posição que não a primeira. Não pode ser modificado o endereço de vetores.
+c) Não é válido, aplica a mesma regra acima.
+d) É válido.
+
+7. Não é correta.
+ 
+8. 
+int main(){
+int x, *xptr;
+    x = 5;
+    xptr = &x;
+} 
+
+9. 
+int main(){
+    
+    // usei x = 9 apenas para testar
+    int x = 9, *xptr;
+    xptr = &x;
+
+    *xptr /= 3;
+    printf("\n%d\n\n", *xptr);
+
+ return 0;
+} 
+
+
+10. a) V
+b) V
+c) V
+d) F
+e) V
+f) F
+
+11. 
+
+
+l-value = valores esquerdos em uma atribuição = uma variavel ou um endereço de memoria (um apontador ou algo que faça referencia a um endereço de memoria). Não pode colocar uma expressão aritmetica do lado esquerdo.
+r-value = valores direitos  em uma atribuição = espressões (aritméticas, logicas)
